@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "540713378828",
+    "firebase_url": "https://individu-assignment-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "individu-assignment",
+    "storage_bucket": "individu-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540713378828:android:d427a78401bf2f7cfeba29",
+        "android_client_info": {
+          "package_name": "com.example.haohaoindividu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAQwunGqvi032Owfh7zPMP677_z0Zsp_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
