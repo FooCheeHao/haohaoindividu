@@ -1,16 +1,20 @@
 # haohaoindividu
 
-A new Flutter project.
+Foo Chee Hao 2350079-DCS
 
-## Getting Started
+## Lab Practical/Assignment
 
-This project is a starting point for a Flutter application.
+- Create a Functional Basic Screen (Login Screen)
+- Apply Firebase Authentication on the Functional Login Screen and Send the Username to the Next Screen
+- Apply Basic API on mobile application
 
-A few resources to get you started if this is your first Flutter project:
+## Firebase Login Authentication
+- Email: foocheehao0707@e.newera.edu.my
+- Password: 040707141269
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Basic API Using
+- Randomuser (https://randomuser.me/api/?results=20)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## APK Location
+- haohaoindividu\build\app\outputs\flutter-apk\app-debug.apk
+
