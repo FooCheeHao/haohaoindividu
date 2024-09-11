@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/FOO/Desktop/android/haohaoindividu/linux"
+    "cmake.sourceDirectory": "C:/Users/FOO/Desktop/android/haohaoindividu/linux",
+    "cmake.ignoreCMakeListsMissing": true
 }

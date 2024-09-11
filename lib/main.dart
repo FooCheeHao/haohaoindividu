@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'homepage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +25,7 @@ class LoginApp extends StatelessWidget {
   }
 }
 
+//Firebase Login
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -81,76 +81,6 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-//randomuser api
-class HomePage extends StatefulWidget {
-  final String name;
-
-  HomePage({required this.name});
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  List<dynamic> users = [];
-  bool isLoading = true;
-
-  @override
-  void initState() {
-    super.initState();
-    _fetchRandomUsers();
-  }
-
-  Future<void> _fetchRandomUsers() async {
-    final response = await http.get(Uri.parse('https://randomuser.me/api/?results=20'));
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-
-      setState(() {
-        users = data['results'];
-        isLoading = false;
-      });
-    } else {
-      // Handle the error, e.g., show a snackbar or dialog
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to fetch random users')),
-      );
-      setState(() {
-        isLoading = false;
-      });
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Welcome, ${widget.name}')),
-      body: isLoading
-          ? Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: users.length,
-              itemBuilder: (context, index) {
-                final user = users[index];
-                final userName = "${user['name']['first']} ${user['name']['last']}";
-                final userEmail = user['email'];
-                final userPicture = user['picture']['thumbnail'];
-
-                return ListTile(
-                  leading: CircleAvatar(
-                    child: Image.network(userPicture),
-                  ),
-                  title: Text(userName),
-                  subtitle: Text(userEmail),
-                );
-              },
-            ),
-            floatingActionButton: FloatingActionButton(onPressed:_fetchRandomUsers,
-          ),
     );
   }
 }

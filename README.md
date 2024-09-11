@@ -15,6 +15,3 @@ Foo Chee Hao 2350079-DCS
 ## Basic API Using
 - Randomuser (https://randomuser.me/api/?results=20)
 
-## APK Location
-- haohaoindividu\build\app\outputs\flutter-apk\app-debug.apk
-
